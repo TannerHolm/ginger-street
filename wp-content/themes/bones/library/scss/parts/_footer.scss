@@ -1,0 +1,97 @@
+footer.footer {
+    background-color: $footer-background;
+    background-image: url('../images/footer-background-web.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .ds-footer-top-image {
+        img {
+            width: 100%;
+        }        
+    }
+    div.ds-footer-inner {
+        padding: 40px 0;
+        .brand img {
+            max-width: 390px;
+        }
+        .ds-footer-left,
+        .ds-footer-right,
+        .ds-footer-widget-1,
+        .ds-footer-widget-2 {
+            width: 49%;
+            display: inline-block;
+        }
+        .ds-footer-left {
+            width: 40% !important;
+            margin-right: 10%;
+            a.brand {
+                display: block;
+            }
+            button.cta {
+                border: 3px solid white;
+                background: transparent;
+                font-family: 'PT Sans', sans-serif;
+                font-weight: 600;
+                font-style: italic;
+                color: white;
+                text-transform: uppercase;
+                font-size: 1.6em;
+                padding: 8px 16px;
+                margin-top: 30px;
+                margin-bottom: 40px;
+                display: block;
+            }
+            a i:before {
+                color: white;
+                font-size: 2em;
+                margin-right: 1em;
+                display: inline-block;
+            }
+        }
+        #footer-right {
+            font-family: 'PT Sans', sans-serif;
+            font-weight: 600;
+            font-style: italic;
+            font-size: 1.6em;
+            color: white;
+            ul {
+                margin-top: 0;
+            }
+            h3.widget-title {
+                font-size: 48px;
+                margin-top: 0;
+                margin-bottom: 20px !important;
+                position: relative;
+                font-style: normal;
+            }
+            h3.widget-title:after {
+                content: "____";
+                width: 70px;
+                position: absolute;
+                left: 5px;
+                margin-top: 5px;
+            }
+            .ds-footer-widget-1 {
+                li.menu-item {
+                    margin-bottom: 5px;
+                    a {
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: white;
+                        letter-spacing: 1px; 
+                    }
+                }
+            }
+            .ds-footer-widget-2 {
+                li {
+                    margin-bottom: 5px !important;
+                }
+                .ds-days {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+    }
+
+}

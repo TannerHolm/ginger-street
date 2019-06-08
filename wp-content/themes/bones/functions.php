@@ -244,4 +244,32 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+// Register Footer Widgets
+function ds_footer_widgets() {
+
+	$args = array(
+		'id'            => 'ds-footer-widget-left',
+		'class'         => 'ds-footer-widget-area',
+        'name'          => __( 'Footer Area Left', 'ginger_street' ),
+        'before_widget' => '<div class="widget ds-footer-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="ds-widget-title widget-title">',
+        'after_title'   => '</h3>',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'ds-footer-widget-rt',
+		'class'         => 'ds-footer-widget-area',
+        'name'          => __( 'Footer Area Right', 'ginger_street' ),
+        'before_widget' => '<div class="widget ds-footer-widget">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="ds-widget-title widget-title">',
+        'after_title'   => '</h3>',
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'ds_footer_widgets' );
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>

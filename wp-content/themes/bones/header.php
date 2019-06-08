@@ -27,8 +27,9 @@
 		<?php // or, set /favicon.ico for IE10 win ?>
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
-            <meta name="theme-color" content="#121212">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.css" />
+        <meta name="theme-color" content="#121212">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<?php // wordpress head functions ?>
@@ -46,7 +47,7 @@
 
 			<header class="banner">
 			  <div class="container">
-			    <a class="brand" href="{{ home_url('/') }}"><img src="{{ the_field('logo') }}" alt=""></a>
+			    <a class="brand" href="<?php home_url('/'); ?>"><img src="<?php the_field('logo'); ?>" alt=""></a>
 			    <nav class="nav-primary">
 			      <?php if (has_nav_menu('primary_navigation'))
 			         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
