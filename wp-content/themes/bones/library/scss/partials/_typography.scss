@@ -39,7 +39,13 @@ FONT FACE (IN YOUR FACE)
       font-style: normal;
   }
 */
-
+@font-face {
+    font-family: 'chromaletterfill';
+    src: url('../fonts/chromaletter-fill-webfont.woff2') format('woff2'),
+         url('../fonts/chromaletter-fill-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*
 The following is based of Typebase:
@@ -51,6 +57,7 @@ I've edited it a bit, but it's a nice starting point.
 // font stacks
 $sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$chromaletterfill:  "chromaletterfill", Times, serif;
 
 /*
  i imported this one in the functions file so bones would look sweet.

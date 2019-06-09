@@ -58,29 +58,32 @@
 								</section> -->
 
 
-								<section id="about" style="background-image: url(<?php the_field('about_background_image') ?>)">
-								  <div class="container">
+								<section id="about">
+								  
 
 								    <div class="row top-row">
-								      <div class="col-md-6">
-								        <h2>ABOUT US</h2>
-								        <img class="top-left" src="<?php the_field('top_left_image') ?>" alt="">
-								      </div>
-								      <div class="col-md-6">
-								        <div class="top-right-text" style="background-image:url(<?php the_field('top_right_text_bg') ?>);">
-								          <?php the_field('top_right_text') ?>
-								        </div>
-								      </div>
+                                        <div class="top-left-image col-md-6">
+                                            <img class="top-left" src="<?php the_field('about_image') ?>" alt="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="300" width="400">
+                                                <polygon points="0,0 300,0 0,300" style="fill:#178974" />
+                                            </svg>
+                                        </div>
+                                        <div class="col-md-6 right-justify">
+                                            <h2><?php the_field('about_title'); ?></h2>
+                                            <article><?php the_field('about_text'); ?></article>
+                                            <button class="cta learn-more-cta" href="<?php the_field('about_cta_link'); ?>"><?php the_field('about_cta_text'); ?></button>
+                                        </div>
 								    </div>
 
 								    <div class="row bottom-row">
 								      <div class="col-md-6">
-								        <div class="bottom-left-text" style="background-image:url(<?php the_field('bottom_left_text_bg') ?>)">
-								          <?php the_field('bottom_left_text') ?>
+								        <div class="bottom-left">
+                                            
 								        </div>
 								      </div>
 								      <div class="col-md-6">
-								        <img class="bottom-right" src="<?php the_field('bottom_right_image') ?>" alt="">
+                                      <div class="bottom-right" style="background-image:url(<?php the_field('about_bottom_right_bg') ?>)">
+								        </div>
 								      </div>
 								    </div>
 								  </div>

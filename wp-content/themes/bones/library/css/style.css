@@ -600,6 +600,12 @@ FONT FACE (IN YOUR FACE)
       font-style: normal;
   }
 */
+@font-face {
+  font-family: 'chromaletterfill';
+  src: url("../fonts/chromaletter-fill-webfont.woff2") format("woff2"), url("../fonts/chromaletter-fill-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
@@ -613,7 +619,7 @@ I've edited it a bit, but it's a nice starting point.
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
-/* line 65, ../scss/partials/_typography.scss */
+/* line 72, ../scss/partials/_typography.scss */
 p {
   -ms-word-wrap: break-word;
   word-break: break-word;
@@ -2738,7 +2744,7 @@ section#about {
   position: relative;
   z-index: 1234;
   background-color: #ededed;
-  margin: 160px auto;
+  margin: 100px 0 -80px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2750,143 +2756,122 @@ section#about {
     background-image: none !important;
   }
 }
-@media screen and (max-width: 768px) {
-  /* line 106, ../scss/pages/_home.scss */
-  section#about .container {
-    width: 100%;
-    max-width: 100%;
-  }
-}
 /* line 113, ../scss/pages/_home.scss */
-section#about .container .row.top-row {
+section#about .row.top-row {
   z-index: 12;
   position: relative;
 }
+/* line 116, ../scss/pages/_home.scss */
+section#about .row.top-row .wrap {
+  padding: 60px 0;
+}
 @media screen and (max-width: 640px) {
-  /* line 118, ../scss/pages/_home.scss */
-  section#about .container .row.bottom-row {
+  /* line 121, ../scss/pages/_home.scss */
+  section#about .row.bottom-row {
     flex-direction: column-reverse;
   }
 }
-/* line 125, ../scss/pages/_home.scss */
-section#about .container .row .col-md-6 h2 {
-  margin-left: 45px;
-  margin-bottom: 24px;
-}
-/* line 130, ../scss/pages/_home.scss */
-section#about .container .row .col-md-6 .top-right-text {
-  margin-left: -20px;
-  transform: translateY(-50px);
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat;
-  padding: 100px;
-  min-height: 400px;
-  z-index: 1234;
-}
-@media screen and (max-width: 768px) {
-  /* line 130, ../scss/pages/_home.scss */
-  section#about .container .row .col-md-6 .top-right-text {
-    margin-left: -50px;
-    padding: 30px 60px;
-    transform: translateY(0px);
-  }
-}
-@media screen and (max-width: 640px) {
-  /* line 130, ../scss/pages/_home.scss */
-  section#about .container .row .col-md-6 .top-right-text {
-    min-height: 330px;
-    margin-left: 0;
-    padding: 30px 60px;
-    transform: translateY(0px);
-    font-size: 12px;
-  }
-}
-/* line 153, ../scss/pages/_home.scss */
-section#about .container .row .col-md-6 img.top-left {
+/* line 128, ../scss/pages/_home.scss */
+section#about .row img.top-left {
+  position: relative;
+  border: 5px solid black;
+  border-left: none;
   width: 100%;
-  max-width: 585px;
-  height: 670px;
-  object-fit: cover;
-  margin-right: -50px;
-  transform: translateX(50px);
-  margin-bottom: -125px;
-  z-index: 123;
 }
 @media screen and (max-width: 768px) {
-  /* line 153, ../scss/pages/_home.scss */
-  section#about .container .row .col-md-6 img.top-left {
-    height: 470px;
-    transform: translateX(25px);
-    margin-bottom: -64px;
+  /* line 128, ../scss/pages/_home.scss */
+  section#about .row img.top-left {
+    margin-left: -40px;
   }
 }
-@media screen and (max-width: 640px) {
-  /* line 153, ../scss/pages/_home.scss */
-  section#about .container .row .col-md-6 img.top-left {
-    margin-right: 0;
-    margin-left: -20px;
-    transform: none;
+/* line 137, ../scss/pages/_home.scss */
+section#about .row .col-md-6.right-justify {
+  margin-left: auto;
+  overflow: hidden;
+  padding: 0 8%;
+}
+@media screen and (max-width: 1200px) {
+  /* line 137, ../scss/pages/_home.scss */
+  section#about .row .col-md-6.right-justify {
+    padding: 0 5%;
   }
+}
+@media screen and (max-width: 960px) {
+  /* line 137, ../scss/pages/_home.scss */
+  section#about .row .col-md-6.right-justify {
+    padding: 0 2%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 137, ../scss/pages/_home.scss */
+  section#about .row .col-md-6.right-justify {
+    padding: 0 18%;
+    margin-bottom: 200px;
+    margin-top: -100px;
+  }
+}
+/* line 152, ../scss/pages/_home.scss */
+section#about .row .col-md-6.right-justify article {
+  line-height: 30px;
+  color: black;
+  padding-right: 30px;
+  font-weight: 400;
+}
+/* line 158, ../scss/pages/_home.scss */
+section#about .row .col-md-6.right-justify button.cta {
+  border: 3px solid black;
+  background: transparent;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  padding: 4px 35px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: block;
+  box-shadow: 12px 12px #EB166F;
 }
 /* line 174, ../scss/pages/_home.scss */
-section#about .container .row .col-md-6 img.bottom-right {
-  width: 100%;
-  max-width: 100%;
-  height: 624px;
-  object-fit: cover;
-  transform: translateX(-100px);
-  margin-top: -125px;
-  z-index: 1;
+section#about .row .bottom-row {
+  height: 400px;
+  margin-top: 200px;
+}
+/* line 180, ../scss/pages/_home.scss */
+section#about .row .col-md-6 h2 {
+  font-family: "chromaletterfill", Times, serif;
+  color: black;
+  font-size: 80px;
+  line-height: 70px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 5px;
 }
 @media screen and (max-width: 768px) {
-  /* line 174, ../scss/pages/_home.scss */
-  section#about .container .row .col-md-6 img.bottom-right {
-    transform: translateX(-25px);
-    height: 375px;
-    margin-top: -40px;
+  /* line 180, ../scss/pages/_home.scss */
+  section#about .row .col-md-6 h2 {
+    margin-top: 0;
   }
 }
-@media screen and (max-width: 640px) {
-  /* line 174, ../scss/pages/_home.scss */
-  section#about .container .row .col-md-6 img.bottom-right {
-    transform: translateX(20px);
-    height: 364px;
-    margin-top: -24px;
-  }
-}
-/* line 194, ../scss/pages/_home.scss */
-section#about .container .row .col-md-6 .bottom-left-text {
-  margin-left: -20px;
-  transform: translateY(50px);
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat;
-  padding: 100px;
-  min-height: 400px;
-  z-index: 1234;
+/* line 192, ../scss/pages/_home.scss */
+section#about .row .col-md-6 svg {
+  display: block;
+  margin-top: -10px;
 }
 @media screen and (max-width: 768px) {
-  /* line 194, ../scss/pages/_home.scss */
-  section#about .container .row .col-md-6 .bottom-left-text {
-    transform: translateY(30px) translateX(40px);
-    padding: 30px 60px;
+  /* line 192, ../scss/pages/_home.scss */
+  section#about .row .col-md-6 svg {
+    margin-top: -80px;
+    margin-left: -10px;
   }
 }
-@media screen and (max-width: 640px) {
-  /* line 194, ../scss/pages/_home.scss */
-  section#about .container .row .col-md-6 .bottom-left-text {
-    min-height: 300px;
-    position: relative;
-    padding: 30px 60px;
-    transform: translateY(-76px) translateX(-6px);
-    padding: 30px 60px;
-    z-index: 1234;
-    font-size: 12px;
-  }
+/* line 200, ../scss/pages/_home.scss */
+section#about .row .col-md-6 .bottom-left {
+  width: 50%;
 }
 
-/* line 222, ../scss/pages/_home.scss */
+/* line 297, ../scss/pages/_home.scss */
 section#menu {
   background-size: cover;
   position: relative;
@@ -2895,7 +2880,7 @@ section#menu {
   padding: 60px 0;
   margin-top: 60px;
 }
-/* line 230, ../scss/pages/_home.scss */
+/* line 305, ../scss/pages/_home.scss */
 section#menu img.top-left {
   position: absolute;
   top: -120px;
@@ -2903,24 +2888,24 @@ section#menu img.top-left {
   max-width: 250px;
 }
 @media screen and (min-width: 1400px) {
-  /* line 230, ../scss/pages/_home.scss */
+  /* line 305, ../scss/pages/_home.scss */
   section#menu img.top-left {
     max-width: 350px;
   }
 }
 @media screen and (min-width: 1800px) {
-  /* line 230, ../scss/pages/_home.scss */
+  /* line 305, ../scss/pages/_home.scss */
   section#menu img.top-left {
     max-width: 450px;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 230, ../scss/pages/_home.scss */
+  /* line 305, ../scss/pages/_home.scss */
   section#menu img.top-left {
     display: none;
   }
 }
-/* line 246, ../scss/pages/_home.scss */
+/* line 321, ../scss/pages/_home.scss */
 section#menu img.bottom-right {
   position: absolute;
   bottom: 120px;
@@ -2928,45 +2913,45 @@ section#menu img.bottom-right {
   max-width: 450px;
 }
 @media screen and (min-width: 1400px) {
-  /* line 246, ../scss/pages/_home.scss */
+  /* line 321, ../scss/pages/_home.scss */
   section#menu img.bottom-right {
     max-width: 550px;
   }
 }
 @media screen and (min-width: 1800px) {
-  /* line 246, ../scss/pages/_home.scss */
+  /* line 321, ../scss/pages/_home.scss */
   section#menu img.bottom-right {
     max-width: 650px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 246, ../scss/pages/_home.scss */
+  /* line 321, ../scss/pages/_home.scss */
   section#menu img.bottom-right {
     max-width: 300px;
     bottom: 60px;
     right: -130px;
   }
 }
-/* line 264, ../scss/pages/_home.scss */
+/* line 339, ../scss/pages/_home.scss */
 section#menu .container {
   background-color: #fff;
   padding: 20px 200px 200px;
 }
 @media screen and (max-width: 1024px) {
-  /* line 264, ../scss/pages/_home.scss */
+  /* line 339, ../scss/pages/_home.scss */
   section#menu .container {
     max-width: 90%;
     padding: 20px 100px 100px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 264, ../scss/pages/_home.scss */
+  /* line 339, ../scss/pages/_home.scss */
   section#menu .container {
     padding: 20px 50px 50px;
   }
 }
 @media screen and (max-width: 640px) {
-  /* line 264, ../scss/pages/_home.scss */
+  /* line 339, ../scss/pages/_home.scss */
   section#menu .container {
     padding: 20px;
     width: 100%;
@@ -2974,12 +2959,12 @@ section#menu .container {
     max-width: 100%;
   }
 }
-/* line 281, ../scss/pages/_home.scss */
+/* line 356, ../scss/pages/_home.scss */
 section#menu .container h2 {
   text-align: center;
   top: -140px;
 }
-/* line 288, ../scss/pages/_home.scss */
+/* line 363, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.top-nav {
   display: flex;
   flex-direction: row;
@@ -2989,18 +2974,18 @@ section#menu .container .row .col-md-12 ul.top-nav {
   margin-top: 24px;
   padding-left: 0px;
 }
-/* line 297, ../scss/pages/_home.scss */
+/* line 372, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.top-nav li {
   margin: 12px;
 }
-/* line 300, ../scss/pages/_home.scss */
+/* line 375, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.top-nav li a {
   text-transform: uppercase;
   color: #323944;
   font-family: "Karla", sans-serif;
   font-size: 25px;
 }
-/* line 311, ../scss/pages/_home.scss */
+/* line 386, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.menu-items-list {
   display: flex;
   flex-direction: column;
@@ -3009,12 +2994,12 @@ section#menu .container .row .col-md-12 ul.menu-items-list {
   margin-bottom: 64px;
 }
 @media screen and (max-width: 640px) {
-  /* line 311, ../scss/pages/_home.scss */
+  /* line 386, ../scss/pages/_home.scss */
   section#menu .container .row .col-md-12 ul.menu-items-list {
     padding-left: 0px;
   }
 }
-/* line 321, ../scss/pages/_home.scss */
+/* line 396, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.menu-items-list li {
   width: 100%;
   text-align: center;
@@ -3023,7 +3008,7 @@ section#menu .container .row .col-md-12 ul.menu-items-list li {
   justify-content: space-between;
   align-items: baseline;
 }
-/* line 329, ../scss/pages/_home.scss */
+/* line 404, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.menu-items-list li .title-description {
   display: flex;
   flex-direction: column;
@@ -3031,7 +3016,7 @@ section#menu .container .row .col-md-12 ul.menu-items-list li .title-description
   align-items: flex-start;
   margin-bottom: 24px;
 }
-/* line 336, ../scss/pages/_home.scss */
+/* line 411, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.menu-items-list li .title-description p {
   margin-bottom: 0;
   line-height: 20px;
@@ -3039,22 +3024,22 @@ section#menu .container .row .col-md-12 ul.menu-items-list li .title-description
   font-size: 18px;
 }
 @media screen and (max-width: 640px) {
-  /* line 336, ../scss/pages/_home.scss */
+  /* line 411, ../scss/pages/_home.scss */
   section#menu .container .row .col-md-12 ul.menu-items-list li .title-description p {
     font-size: 12px;
   }
 }
-/* line 347, ../scss/pages/_home.scss */
+/* line 422, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.menu-items-list li .title-description .menu-item-description {
   font-size: 16px;
 }
 @media screen and (max-width: 640px) {
-  /* line 347, ../scss/pages/_home.scss */
+  /* line 422, ../scss/pages/_home.scss */
   section#menu .container .row .col-md-12 ul.menu-items-list li .title-description .menu-item-description {
     font-size: 9px;
   }
 }
-/* line 356, ../scss/pages/_home.scss */
+/* line 431, ../scss/pages/_home.scss */
 section#menu .container .row .col-md-12 ul.menu-items-list li .price {
   font-style: italic;
 }
