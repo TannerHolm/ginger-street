@@ -3057,7 +3057,7 @@ section#when-where {
   padding-bottom: 200px;
   background-size: cover;
   background-position-x: center;
-  background-position-y: center;
+  background-position-y: -200px;
   background-repeat: no-repeat;
 }
 /* line 455, ../scss/pages/_home.scss */
@@ -3170,6 +3170,119 @@ section#when-where .www-icon.wok-up-icon {
   top: 0;
 }
 
+/* line 550, ../scss/pages/_home.scss */
+section#desserts {
+  color: black;
+}
+/* line 552, ../scss/pages/_home.scss */
+section#desserts h2 {
+  font-family: "chromaletterfill", Times, serif;
+  font-size: 80px;
+  line-height: 70px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+/* line 559, ../scss/pages/_home.scss */
+section#desserts h3 {
+  font-family: "chromaletterfill", Times, serif;
+  font-size: 60px;
+  line-height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+/* line 569, ../scss/pages/_home.scss */
+section#desserts .bottom-row ul.desserts-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+@media screen and (max-width: 640px) {
+  /* line 569, ../scss/pages/_home.scss */
+  section#desserts .bottom-row ul.desserts-menu-list {
+    padding-left: 0px;
+  }
+}
+/* line 579, ../scss/pages/_home.scss */
+section#desserts .bottom-row ul.desserts-menu-list li {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+/* line 587, ../scss/pages/_home.scss */
+section#desserts .bottom-row ul.desserts-menu-list li .title-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/* line 594, ../scss/pages/_home.scss */
+section#desserts .bottom-row ul.desserts-menu-list li .title-description p {
+  margin-bottom: 0;
+  line-height: 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+@media screen and (max-width: 640px) {
+  /* line 594, ../scss/pages/_home.scss */
+  section#desserts .bottom-row ul.desserts-menu-list li .title-description p {
+    font-size: 12px;
+  }
+}
+/* line 604, ../scss/pages/_home.scss */
+section#desserts .bottom-row ul.desserts-menu-list li .title-description .dessert-description {
+  font-size: 16px;
+}
+@media screen and (max-width: 640px) {
+  /* line 604, ../scss/pages/_home.scss */
+  section#desserts .bottom-row ul.desserts-menu-list li .title-description .dessert-description {
+    font-size: 9px;
+  }
+}
+/* line 612, ../scss/pages/_home.scss */
+section#desserts .bottom-row ul.desserts-menu-list li .dessert-price {
+  font-style: italic;
+}
+/* line 618, ../scss/pages/_home.scss */
+section#desserts .bottom-row .bottom-left.container {
+  margin-top: 120px;
+}
+/* line 622, ../scss/pages/_home.scss */
+section#desserts .bottom-row .bottom-right {
+  position: relative;
+  top: -40px;
+}
+/* line 625, ../scss/pages/_home.scss */
+section#desserts .bottom-row .bottom-right img {
+  display: block;
+  margin-left: auto;
+}
+/* line 631, ../scss/pages/_home.scss */
+section#desserts .bottom-dessert-transition {
+  margin-top: -125px;
+}
+/* line 633, ../scss/pages/_home.scss */
+section#desserts .bottom-dessert-transition img {
+  max-width: 240px;
+}
+/* line 638, ../scss/pages/_home.scss */
+section#desserts .col-md-6 .container {
+  max-width: 600px;
+}
+/* line 640, ../scss/pages/_home.scss */
+section#desserts .col-md-6 .container article {
+  line-height: 30px;
+  color: black;
+  padding-right: 30px;
+  font-weight: 400;
+}
+
 /* line 1, ../scss/parts/_footer.scss */
 footer.footer {
   background-color: #6e002b;
@@ -3245,34 +3358,39 @@ footer.footer div.ds-footer-inner #footer-right ul {
 footer.footer div.ds-footer-inner #footer-right h3.widget-title {
   font-size: 48px;
   margin-top: 0;
-  margin-bottom: 20px !important;
+  margin-bottom: 40px !important;
   position: relative;
   font-style: normal;
+  font-family: "chromaletterfill", Times, serif;
+  line-height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
 }
-/* line 67, ../scss/parts/_footer.scss */
+/* line 71, ../scss/parts/_footer.scss */
 footer.footer div.ds-footer-inner #footer-right h3.widget-title:after {
-  content: "____";
-  width: 70px;
+  content: " ";
+  width: 75px;
   position: absolute;
-  left: 5px;
-  margin-top: 5px;
+  left: 0;
+  margin-top: 60px;
+  border-bottom: 3px solid white;
 }
-/* line 75, ../scss/parts/_footer.scss */
+/* line 80, ../scss/parts/_footer.scss */
 footer.footer div.ds-footer-inner #footer-right .ds-footer-widget-1 li.menu-item {
   margin-bottom: 5px;
 }
-/* line 77, ../scss/parts/_footer.scss */
+/* line 82, ../scss/parts/_footer.scss */
 footer.footer div.ds-footer-inner #footer-right .ds-footer-widget-1 li.menu-item a {
   text-transform: uppercase;
   text-decoration: none;
   color: white;
   letter-spacing: 1px;
 }
-/* line 86, ../scss/parts/_footer.scss */
+/* line 91, ../scss/parts/_footer.scss */
 footer.footer div.ds-footer-inner #footer-right .ds-footer-widget-2 li {
   margin-bottom: 5px !important;
 }
-/* line 89, ../scss/parts/_footer.scss */
+/* line 94, ../scss/parts/_footer.scss */
 footer.footer div.ds-footer-inner #footer-right .ds-footer-widget-2 .ds-days {
   text-transform: uppercase;
 }

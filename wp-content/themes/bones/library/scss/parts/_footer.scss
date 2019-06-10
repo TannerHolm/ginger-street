@@ -60,16 +60,21 @@ footer.footer {
             h3.widget-title {
                 font-size: 48px;
                 margin-top: 0;
-                margin-bottom: 20px !important;
+                margin-bottom: 40px !important;
                 position: relative;
                 font-style: normal;
+                font-family: $chromaletterfill;
+                line-height: 45px;
+                text-transform: uppercase;
+                letter-spacing: 6px;
             }
             h3.widget-title:after {
-                content: "____";
-                width: 70px;
+                content: " ";
+                width: 75px;
                 position: absolute;
-                left: 5px;
-                margin-top: 5px;
+                left: 0;
+                margin-top: 60px;
+                border-bottom: 3px solid white;
             }
             .ds-footer-widget-1 {
                 li.menu-item {

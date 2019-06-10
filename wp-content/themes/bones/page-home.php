@@ -201,7 +201,56 @@
 								  </div>
                                 </section>
                                 
-                                
+                                <section id="desserts">
+								    <div class="row top-row">
+                                        <div class="dessert-transition" style="background-image:url('./wp-content/themes/bones/library/images/dessert-transition.png');"></div>
+                                        <div class="top-left-image col-md-6">
+                                            <img class="top-left" src="<?php the_field('desserts_image') ?>" alt="">
+                                        </div>
+                                        <div class="col-md-6 right-justify">
+                                            <div class="container">
+                                                <h2><?php the_field('desserts_title'); ?></h2>
+                                                <article><?php the_field('desserts_content'); ?></article>
+                                            </div>
+                                        </div>
+								    </div>
+
+								    <div class="row bottom-row">
+								      <div class="col-md-6">
+								        <div class="bottom-left container">
+                                        <?php if( have_rows('desserts') ): ?>
+                                            <h3>Dessert Menu</h3>
+                                            <ul class="desserts-menu-list">
+                                                <?php  while ( have_rows('desserts') ) : the_row(); ?>
+                                                    <li>
+                                                        <div class="title-description">
+                                                            <p class="dessert-title">
+                                                            <?php the_sub_field('dessert_title') ?>
+                                                            </p>
+                                                            <div class="dessert-description">
+                                                            <?php the_sub_field('dessert_description') ?>
+                                                            </div>
+                                                        </div>
+                                                        <div class="dessert-price">
+                                                            $<?php the_sub_field('dessert_price') ?>
+                                                        </div>
+                                                    </li>
+                                                <?php endwhile; ?>
+                                            </ul>
+                                        <?php endif; ?>
+								        </div>
+								      </div>
+								      <div class="col-md-6">
+                                      <div class="bottom-right">
+                                          <img src="<?php echo the_field('desserts_menu_image'); ?>" alt="">
+								        </div>
+								      </div>
+                                    </div>
+                                    <div class="bottom-dessert-transition">
+                                        <img src="./wp-content/themes/bones/library/images/dessert-texture-temp.jpg" alt="">
+                                    </div>
+								  </div>
+								</section>
 
 							<?php endwhile; else : ?>
 
