@@ -1,0 +1,15 @@
+header.banner {
+    position: absolute;
+    z-index: 13;
+    top: 0;
+    width: 100%;
+    .wrap {
+        display: block;
+        margin: 0 auto;
+    }
+    a.brand img {
+        max-width: 245px;
+        margin-top: 50px;
+    }
+    
+}

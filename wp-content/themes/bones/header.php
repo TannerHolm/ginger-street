@@ -46,7 +46,7 @@
 		<div id="container">
 
 			<header class="banner">
-			  <div class="container">
+			  <div class="wrap">
 			    <a class="brand" href="<?php home_url('/'); ?>"><img src="<?php the_field('logo'); ?>" alt=""></a>
 			    <nav class="nav-primary">
 			      <?php if (has_nav_menu('primary_navigation'))

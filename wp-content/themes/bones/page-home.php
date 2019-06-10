@@ -15,6 +15,8 @@
 
 <?php get_header(); ?>
 
+<?php $www_icons = get_field('www_icons'); ?>
+
 						<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -148,13 +150,14 @@
 								  </div>
 								  <img class="bottom-right" src="<?php the_field('bottom_right_menu_image') ?>" alt="">
 								</section>
-
-								<section id="when-where">
+                                
+								<section id="when-where" style="background-image: url(<?php the_field('when_where_background_image'); ?>">
 								  <div class="container">
 								    <div class="row">
 								      <div class="col-md-6">
-								        <div class="where">
-								          <h3 class="where-title">WHERE</h3>
+								        <div class="where" style="background-image:url('./wp-content/themes/bones/library/images/where-bg-2x.png');">
+                                          <h3 class="where-title">WHERE</h3>
+                                          <img src="<?php echo $www_icons['where_icon']; ?>" alt="" class="www-icon where-icon">
 								          <img src="<?php the_field('where_image') ?>" alt="" class="where-img">
 								          <div class="where-address">
 								            <?php the_field('where_address') ?>
@@ -162,11 +165,43 @@
 								        </div>
 								      </div>
 								      <div class="col-md-6">
-
-								      </div>
+                                        <div class="when" style="background-image:url('./wp-content/themes/bones/library/images/when-bg-2x.png');">
+                                            <h3 class="when-title">When</h3>
+                                            <img src="<?php echo $www_icons['when_icon']; ?>" alt="" class="www-icon when-icon">
+                                            <div class="when-info">
+                                                <?php if( have_rows('when_info') ): ?>
+                                                    <ul class="when-info-list">
+                                                        <?php  while ( have_rows('when_info') ) : the_row(); ?>
+                                                            <li>
+                                                                <span class="days"><?php the_sub_field('days'); ?></span><span class="times"><?php the_sub_field('times'); ?></span>
+                                                            </li>
+                                                        <?php endwhile; ?>
+                                                    </ul>
+                                                <?php endif; ?>
+                                            </div>
+                                        
+                                            <div class="wok-up-window">
+                                                <h3 class="wok-up">Wok Up</h3>
+                                                <img src="<?php echo $www_icons['wok_up_icon']; ?>" alt="" class="www-icon wok-up-icon">
+                                                <div class="wok-up-info">
+                                                    <?php if( have_rows('wok_up_window') ): ?>
+                                                        <ul class="wok-up-info-list">
+                                                            <?php  while ( have_rows('wok_up_window') ) : the_row(); ?>
+                                                                <li>
+                                                                    <span class="days"><?php the_sub_field('days'); ?></span><span class="times"><?php the_sub_field('times'); ?></span>
+                                                                </li>
+                                                            <?php endwhile; ?>
+                                                        </ul>
+                                                    <?php endif; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
 								    </div>
 								  </div>
-								</section>
+                                </section>
+                                
+                                
 
 							<?php endwhile; else : ?>
 
