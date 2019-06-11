@@ -4,15 +4,31 @@ footer.footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    #inner-footer {
+        width: 90%;
+        max-width: 1200px;
+        @media screen and (max-width: 1200px) {
+            width: 95%;
+        }
+    }
     .ds-footer-top-image {
         img {
             width: 100%;
+            @media screen and (max-width: 768px) {
+                width: 167%;
+                position: relative;
+                left: -33.3333333333%;
+            }
         }        
     }
     div.ds-footer-inner {
         padding: 40px 0;
         .brand img {
             max-width: 390px;
+            width: 100%;
+            @media screen and (max-width: 1100px) {
+                max-width: 280px;
+            }
         }
         .ds-footer-left,
         .ds-footer-right,
@@ -21,9 +37,33 @@ footer.footer {
             width: 49%;
             display: inline-block;
         }
+        .ds-footer-widget-1,
+        .ds-footer-widget-2 {
+            @media screen and (max-width: 1100px) {
+                width: 45%;
+            }
+            @media screen and (max-width: 768px) {
+                width: 49%;
+            }
+        }
         .ds-footer-left {
             width: 40% !important;
             margin-right: 10%;
+            @media screen and (max-width: 1200px) {
+                width: 45% !important;
+                margin: 0;
+            }
+            @media screen and (max-width: 1100px) {
+                width: 42% !important;
+                margin: 0;
+            }
+            @media screen and (max-width: 768px) {
+                width: 100% !important;
+                text-align: center;
+                button.cta {
+                    margin: 0 auto;
+                }
+            }
             a.brand {
                 display: block;
             }
@@ -54,6 +94,23 @@ footer.footer {
             font-style: italic;
             font-size: 1.6em;
             color: white;
+            @media screen and (max-width: 1200px) {
+                width: 54% !important;
+            }
+            @media screen and (max-width: 1100px) {
+                width: 57% !important;
+                margin: 0;
+                font-size: 1.3em !important;
+            }
+            @media screen and (max-width: 992px) {
+                font-size: 1.2em !important;
+            }
+            @media screen and (max-width: 768px) {
+                width: 55% !important;
+                display: block;
+                margin: 0 auto;
+                margin-top: 60px;
+            }
             ul {
                 margin-top: 0;
             }

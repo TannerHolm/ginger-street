@@ -47,11 +47,16 @@
 
 			<header class="banner">
 			  <div class="wrap">
-			    <a class="brand" href="<?php home_url('/'); ?>"><img src="<?php the_field('logo'); ?>" alt=""></a>
-			    <nav class="nav-primary">
-			      <?php if (has_nav_menu('primary_navigation'))
-			         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
-			      ?>
-			    </nav>
+                <a class="brand" href="<?php home_url('/'); ?>"><img src="<?php the_field('logo'); ?>" alt=""></a>
+                <div class="header-right">
+                    <a href="<?php the_field('yelp'); ?>" target="_blank"><i class="fa fa-yelp"></i></a>
+                    <a href="<?php the_field('facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="<?php the_field('instagram'); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <nav class="nav-primary">
+                    <?php if (has_nav_menu('primary_navigation'))
+                        wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
+                    ?>
+                    </nav>
+                </div>
 			  </div>
 			</header>
