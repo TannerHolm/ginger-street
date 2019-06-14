@@ -15,11 +15,21 @@ header.banner {
             width: 90%;
 
         }
+        // @media screen and (max-width: 992px) and (orientation: landscape){
+        //     max-width: 542px;
+        // }
+        @media screen and (max-width: 375px) {
+
+        }
         a i:before {
             color: white;
             font-size: 2em;
             margin-right: 1em;
             display: inline-block;
+            @media screen and (max-width: 375px) {
+                font-size: 1.5em;
+                margin-right: .5em;
+            }
         }
     }
     a.brand {
@@ -32,6 +42,12 @@ header.banner {
                 max-width: 190px;
                 margin-top: 30px;
             }
+            @media screen and (max-width: 375px) {
+                max-width: 100px;
+            }
+            // @media screen and (max-width: 992px) and (orientation: landscape){
+            //     max-width: 100px;
+            // }
         }
     }
     .header-right {
@@ -41,7 +57,9 @@ header.banner {
         @media screen and (max-width: 992px) {
             margin-top: 30px;
         }
-    }
-
+        @media screen and (max-width: 375px) {
+            width: 100px;
+        }
+    }    
     
 }

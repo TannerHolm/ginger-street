@@ -166,6 +166,7 @@
 								      </div>
 								      <div class="col-md-6">
                                         <div class="when" style="background-image:url('./wp-content/themes/bones/library/images/when-bg-2x.png');">
+                                            <div class="when-where-wrap"> 
                                             <h3 class="when-title">When</h3>
                                             <img src="<?php echo $www_icons['when_icon']; ?>" alt="" class="www-icon when-icon">
                                             <div class="when-info">
@@ -195,6 +196,7 @@
                                                     <?php endif; ?>
                                                 </div>
                                             </div>
+                                            </div> <!-- end when-where-wrap -->                   
                                         </div>
                                       </div>
 								    </div>
