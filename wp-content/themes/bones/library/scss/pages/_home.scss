@@ -539,6 +539,7 @@ section#when-where {
             margin-bottom: 30px;
             margin-top: 5px;
             text-align: center;
+            display: inline-block;
         }
         ul {
             padding: 0 6%;
@@ -621,9 +622,9 @@ section#when-where {
             margin-right: 0;
             padding: 60px 30px 95px 30px;
         }
-        // @media screen and (max-width: 600px) {
-        //     background-size: 130%;
-        // }
+        @media screen and (max-width: 500px) {
+            background-size: 130%;
+        }
         @media screen and (max-width: 375px) {
             background-size: 144%;
         }
@@ -645,8 +646,8 @@ section#when-where {
         }
     }
     .when {
-        margin-left: 40px;
-        background-size: 120%;
+        // margin-left: 40px;
+        background-size: 122%;
         background-position: center;
         background-repeat: no-repeat;
         @media screen and (max-width: 1200px) {
@@ -668,53 +669,67 @@ section#when-where {
         @media screen and (max-width: 428px) {
             background-size: 144%;
         }
+        @media screen and (max-width: 375px) {
+            background-size: 160%;
+        }
         .wok-up-window {
             position: relative;
             padding-bottom: 85px !important;
             margin-top: 70px;
+            @media screen and (max-width: 375px) {
+                margin-top: 40px;
+            }
         }
     }
     .when-where-wrap {
 
     }
+    header {
+        &.when-header,
+        &.where-header,
+        &.wok-up-header {
+            text-align: center;
+        }
+    }
     .www-icon {
-        position: absolute;
+        // position: absolute;
         width: 40px;
-        
-        &.where-icon {
-            left: 95px;
-            top: 58px;
-            @media screen and (max-width: 1200px) {
-                top: 56px;
-                left: 80px;
-            }
-            @media screen and (max-width: 992px) {
-                top: 67px;
-                left: 108px;
-            }
-        }
-        &.when-icon {
-            left: 115px;
-            top: 58px;
-            @media screen and (max-width: 1200px) {
-                top: 56px;
-                left: 95px;
-            }
-            @media screen and (max-width: 992px) {
-                top: 67px;
-                left: 120px;
-            }
-        }
-        &.wok-up-icon {
-            left: 55px;
-            top: 0;
-            @media screen and (max-width: 1200px) {
-                left: 42px;
-            }
-            @media screen and (max-width: 992px) {
-                left: 60px;
-            }
-        }
+        display: inline-block;
+        margin-right: 15px;
+        // &.where-icon {
+        //     left: 95px;
+        //     top: 58px;
+        //     @media screen and (max-width: 1200px) {
+        //         top: 56px;
+        //         left: 80px;
+        //     }
+        //     @media screen and (max-width: 992px) {
+        //         top: 67px;
+        //         left: 108px;
+        //     }
+        // }
+        // &.when-icon {
+        //     left: 115px;
+        //     top: 58px;
+        //     @media screen and (max-width: 1200px) {
+        //         top: 56px;
+        //         left: 95px;
+        //     }
+        //     @media screen and (max-width: 992px) {
+        //         top: 67px;
+        //         left: 120px;
+        //     }
+        // }
+        // &.wok-up-icon {
+        //     left: 55px;
+        //     top: 0;
+        //     @media screen and (max-width: 1200px) {
+        //         left: 42px;
+        //     }
+        //     @media screen and (max-width: 992px) {
+        //         left: 60px;
+        //     }
+        // }
     }
     
 }

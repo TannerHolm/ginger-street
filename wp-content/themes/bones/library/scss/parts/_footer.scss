@@ -29,6 +29,9 @@ footer.footer {
             @media screen and (max-width: 1100px) {
                 max-width: 280px;
             }
+            @media screen and (max-width: 600px) {
+                max-width: 200px;
+            }
         }
         .ds-footer-left,
         .ds-footer-right,
@@ -87,6 +90,9 @@ footer.footer {
                 margin-right: 1em;
                 display: inline-block;
             }
+            .fa-yelp:before {
+                margin-right: 0;
+            }
         }
         #footer-right {
             font-family: 'PT Sans', sans-serif;
@@ -107,9 +113,21 @@ footer.footer {
             }
             @media screen and (max-width: 768px) {
                 width: 55% !important;
+                margin: 0 auto;
+                display: block;
+                margin-top: 40px;
+            }
+            @media screen and (max-width: 600px) {
+                width: 100% !important;
                 display: block;
                 margin: 0 auto;
                 margin-top: 60px;
+            }
+            @media screen and (max-width: 468px) {
+                font-size: 1.0em !important;
+            }
+            @media screen and (max-width: 375px) {
+                font-size: 14px !important;
             }
             ul {
                 margin-top: 0;
@@ -124,6 +142,9 @@ footer.footer {
                 line-height: 45px;
                 text-transform: uppercase;
                 letter-spacing: 6px;
+                @media screen and (max-width: 600px) {
+                    font-size: 40px;
+                }
             }
             h3.widget-title:after {
                 content: " ";
@@ -132,6 +153,22 @@ footer.footer {
                 left: 0;
                 margin-top: 60px;
                 border-bottom: 3px solid white;
+                @media screen and (max-width: 600px) {
+                    left: 40%;
+                }
+            }
+            .ds-footer-widget-1,
+            .ds-footer-widget-2 {
+                @media screen and (max-width: 600px) {
+                    display: block;
+                    width: 100% !important;
+                    h3 {
+                        text-align: center;
+                    }
+                    ul li {
+                        display: inline-block;
+                    }
+                }
             }
             .ds-footer-widget-1 {
                 li.menu-item {
@@ -143,6 +180,18 @@ footer.footer {
                         letter-spacing: 1px; 
                     }
                 }
+                @media screen and (max-width: 600px) {
+                    ul {
+                        width: 100%;
+                        text-align: center;
+                        li:not(:last-of-type) a:after {
+                            content: " | ";
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+                    }
+                    
+                }
             }
             .ds-footer-widget-2 {
                 li {
@@ -150,6 +199,19 @@ footer.footer {
                 }
                 .ds-days {
                     text-transform: uppercase;
+                }
+                @media screen and (max-width: 600px) {
+                    margin-top: 30px;
+                    ul {
+                        li {
+                            width: 49.2%;
+                        }
+                        li.ds-days {
+                            width: 45%;
+                            text-align: right;
+                            margin-right: 4%;
+                        }
+                    }
                 }
             }
         }

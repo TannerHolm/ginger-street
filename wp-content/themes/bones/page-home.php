@@ -155,9 +155,11 @@
 								  <div class="container">
 								    <div class="row">
 								      <div class="col-md-6">
-								        <div class="where" style="background-image:url('./wp-content/themes/bones/library/images/where-bg-2x.png');">
-                                          <h3 class="where-title">WHERE</h3>
-                                          <img src="<?php echo $www_icons['where_icon']; ?>" alt="" class="www-icon where-icon">
+                                        <div class="where" style="background-image:url('./wp-content/themes/bones/library/images/where-bg-2x.png');">
+                                            <header class="where-header">
+                                                <img src="<?php echo $www_icons['where_icon']; ?>" alt="" class="www-icon where-icon">
+                                                <h3 class="where-title">WHERE</h3>
+                                            </header>
 								          <img src="<?php the_field('where_image') ?>" alt="" class="where-img">
 								          <div class="where-address">
 								            <?php the_field('where_address') ?>
@@ -167,8 +169,10 @@
 								      <div class="col-md-6">
                                         <div class="when" style="background-image:url('./wp-content/themes/bones/library/images/when-bg-2x.png');">
                                             <div class="when-where-wrap"> 
-                                            <h3 class="when-title">When</h3>
-                                            <img src="<?php echo $www_icons['when_icon']; ?>" alt="" class="www-icon when-icon">
+                                                <header class="when-header">
+                                                    <img src="<?php echo $www_icons['when_icon']; ?>" alt="" class="www-icon when-icon">
+                                                    <h3 class="when-title">When</h3>
+                                                </header>
                                             <div class="when-info">
                                                 <?php if( have_rows('when_info') ): ?>
                                                     <ul class="when-info-list">
@@ -182,8 +186,10 @@
                                             </div>
                                         
                                             <div class="wok-up-window">
-                                                <h3 class="wok-up">Wok Up</h3>
-                                                <img src="<?php echo $www_icons['wok_up_icon']; ?>" alt="" class="www-icon wok-up-icon">
+                                                <header class="wok-up-header">
+                                                    <img src="<?php echo $www_icons['wok_up_icon']; ?>" alt="" class="www-icon wok-up-icon">
+                                                    <h3 class="wok-up">Wok Up</h3>
+                                                </header>
                                                 <div class="wok-up-info">
                                                     <?php if( have_rows('wok_up_window') ): ?>
                                                         <ul class="wok-up-info-list">
