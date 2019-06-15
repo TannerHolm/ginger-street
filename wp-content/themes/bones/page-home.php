@@ -91,65 +91,62 @@
 								  </div>
 								</section>
 
-								<section id="menu" style="background-image:url(<?php the_field('menu_background_image') ?>)">
-								  <img class="top-left" src="<?php the_field('top_left_menu_image') ?>" alt="">
-								  <div class="container">
-								      <h2>MENU</h2>
-								    <div class="row">
-								      <div class="col-md-12">
-								          <ul class="top-nav">
-								            <?php if( have_rows('menu') ): ?>
+                                <section id="menu" style="background-image:url(<?php the_field('menu_background_image') ?>)">
+                                    <img class="top-left" src="<?php the_field('top_left_menu_image') ?>" alt="">
+                                    <div class="container">
+                                        <h2><?php the_field('menu_title') ?></h2>
+                                        <div class="slide-nav">
+                                            <span class="menu-left menu-left-right flex-prev"></span><span class="menu-right menu-left-right flex-next"></span>
+                                        </div>
+                                        <div class="row flexslider">
 
-								              <?php  while ( have_rows('menu') ) : the_row(); ?>
-								                <li><a href="#"><?php the_sub_field('menu_group_title') ?></a></li>
+                                            <div class="col-md-12 slides">
+                                                <!-- removed nav -->
+                                                <?php if( have_rows('menu') ): ?>
+                                                    <?php  while ( have_rows('menu') ) : the_row(); ?>
+                                                        <div class="menu-group menu-items slide">
+                                                            <div class="menu-image-container">
+                                                                <img src="<?php the_sub_field('menu_group_image') ?>" alt="" class="menu-group-image">
+                                                            </div>
+                                                            <?php if( have_rows('menu_items') ): ?>
+                                                                
+                                                                <ul class="menu-items-list">
+                                                                <?php  while ( have_rows('menu_items') ) : the_row(); ?>
+                                                                <li>
+                                                                <div class="title-description">
+                                                                    <p class="menu-item-title">
+                                                                        <?php the_sub_field('menu_item_title') ?>
+                                                                    </p>
+                                                                    <div class="menu-item-description">
+                                                                        <?php the_sub_field('menu_item_description') ?>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="price">
+                                                                    $<?php the_sub_field('menu_item_price') ?>
+                                                                </div>
+                                                                </li>
+                                                                
+                                                                <?php endwhile; ?>
+                                                                </ul>
+                                                            <?php else : ?>
+                                                            
+                                                            <?php endif; ?>
+                                                        </div>
 
-								              <?php endwhile; ?>
 
-								            <?php else : ?>
 
-								            <?php endif; ?>
-								          </ul>
-								          <div class="menu-items">
-								            <?php if( have_rows('menu') ): ?>
 
-								              <?php  while ( have_rows('menu') ) : the_row(); ?>
-								                  <ul class="menu-items-list" data-attribute="<?php the_sub_field('menu_group_title') ?>">
-								                    <?php if( have_rows('menu_items') ): ?>
+                                                    <?php endwhile; ?>
 
-								                      <?php  while ( have_rows('menu_items') ) : the_row(); ?>
+                                                <?php else : ?>
 
-								                          <li>
-								                            <div class="title-description">
-								                              <p class="menu-item-title">
-								                                <?php the_sub_field('menu_item_title') ?>
-								                              </p>
-								                              <div class="menu-item-description">
-								                                <?php the_sub_field('menu_item_description') ?>
-								                              </div>
-								                            </div>
-								                            <div class="price">
-								                              $<?php the_sub_field('menu_item_price') ?>
-								                            </div>
-								                          </li>
+                                                <?php endif; ?>
 
-								                      <?php endwhile; ?>
-
-								                    <?php else : ?>
-								                  </ul>
-
-								                  <?php endif; ?>
-
-								              <?php endwhile; ?>
-
-								            <?php else : ?>
-
-								            <?php endif; ?>
-								          </div>
-								      </div>
-								    </div>
-								  </div>
-								  <img class="bottom-right" src="<?php the_field('bottom_right_menu_image') ?>" alt="">
-								</section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <img class="bottom-right" src="<?php the_field('bottom_right_menu_image') ?>" alt="">
+                                </section>
                                 
 								<section id="when-where" style="background-image: url(<?php the_field('when_where_background_image'); ?>">
 								  <div class="container">

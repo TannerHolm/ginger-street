@@ -63,6 +63,15 @@ function bones_ahoy() {
 // let's get this party started
 add_action( 'after_setup_theme', 'bones_ahoy' );
 
+// Enqueue Scripts
+
+function ds_custom_scripts () {
+    wp_enqueue_style('flexslider-css', 'https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css', array(), '2.7.2');
+    wp_enqueue_script('flexslider', 'https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js', array('jquery'), '2.7.2', false);
+}
+
+add_action('wp_enqueue_scripts', 'ds_custom_scripts');
+
 
 /************* OEMBED SIZE OPTIONS *************/
 

@@ -116,5 +116,19 @@ jQuery(document).ready(function($) {
   */
   loadGravatars();
 
+    $('.flexslider').flexslider({
+        selector: '.slides > .slide',
+        // controlsContainer: $('.slide-nav'),
+        customDirectionNav: $('.slide-nav .menu-left-right'),
+        // manualControls: $('.menu-left-right'),
+        touch: true,
+        slideshow: false,
+        controlNav: false
+
+
+    });
+
+    console.log('flexslider');
 
 }); /* end of as page load scripts */
+

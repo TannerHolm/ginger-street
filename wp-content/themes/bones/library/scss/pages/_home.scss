@@ -327,7 +327,7 @@ section#menu {
   overflow: visible;
   z-index: 12345;
   padding: 60px 0 0 0;
-  margin-top: 60px;
+//   margin-top: 60px;
   color: black;
 
   img.top-left {
@@ -396,10 +396,57 @@ section#menu {
       line-height: 70px;
       text-transform: uppercase;
       text-align: center;
-      top: -140px;
+      top: -100px;
+      position: absolute;
+      width: 42%;
+    }
+
+    .slide-nav {
+        width: 450px;
+        margin: 0 auto;
+        height: 32px;
+        top:75px;
+        position: relative;
+        z-index: 123;
+        @media screen and (max-width: 500px) {
+            width: 375px;
+        }
+    }
+    .menu-left-right:hover {
+        cursor: pointer;
+    }
+    span.menu-left.menu-left-right.flex-prev,
+    span.menu-right.menu-left-right.flex-next {
+        display: inline-block;
+    }
+    span.menu-right.menu-left-right.flex-next {
+        text-align: right;  
+        position: relative;
+        float:right;  
+    }
+    span.menu-right,
+    span.menu-left {
+        width: 0; 
+        height: 0; 
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+    }
+    span.menu-right {
+        border-left: 12px solid #EC247B;
+    }
+    span.menu-left {
+        border-right: 12px solid #EC247B;
+    }
+    img.menu-group-image {
+        width:360px;
+        margin: 0 auto;
+        @media screen and (max-width: 500px) {
+            width: 315px;
+        }
     }
 
     .row {
+        clear: both;
       .col-md-12 {
         ul.top-nav {
           display: flex;
